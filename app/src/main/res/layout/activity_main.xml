@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/layout_main_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/group_bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <!-- 首页 -->
+        <RadioButton
+            style="@style/MainBottomTabButton"
+            android:id="@+id/radio_tab_home_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_home"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+
+        <!-- 表格 -->
+        <RadioButton
+            style="@style/MainBottomTabButton"
+            android:id="@+id/radio_tab_table"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:drawableTop="@drawable/selector_tab_query"
+            android:gravity="center_horizontal"
+            android:text="表格" />
+
+        <!-- 关注 -->
+        <RadioButton
+            style="@style/MainBottomTabButton"
+            android:id="@+id/radio_tab_attention"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_analysis"
+            android:gravity="center_horizontal"
+            android:text="关注" />
+
+        <!-- 我的 -->
+        <RadioButton
+            style="@style/MainBottomTabButton"
+            android:id="@+id/radio_tab_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_real_monitor"
+            android:gravity="center_horizontal"
+            android:text="我的" />
+
+    </RadioGroup>
+
+</LinearLayout>
