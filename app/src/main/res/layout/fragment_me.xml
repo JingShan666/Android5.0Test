@@ -1,15 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+            <ImageView
+                android:id="@+id/main.backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0"
+                android:contentDescription="@null"
+                android:src="@drawable/guangda_logo"
+
+
+
+
+                />
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:title="Android 5.0新特性"
+                app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+                app:titleTextColor="@android:color/holo_red_dark"
+                app:layout_collapseMode="pin"
+
+
+                >
+
+
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android 5.0 Lollipop 是迄今为止最重大的一次发布，因为 material design 的存在，android的界面风格发生了新的改变，这是一门新的设计语言，它刷新了整个 Android 的用户体验。对于开发者来说，要设计出完全符合 material design 哲学的应用，是一个很大的挑战。
+Android Design Support Library 对此提供了很好的支持，里面汇集了很多重要的 material design 控件，支持所有 Android 2.1 及后续版本。里面你可以看到 navigation drawer view、floating labels、floating action button、snackbar、tabs，以及一套将它们紧密结合在一起的动作与滚动框架。"
+            android:textSize="20sp" />
+
+            />
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fragment_me"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/goods_add"
+        app:layout_anchor="@id/appbar"
+        app:borderWidth="0dp"
+        app:backgroundTint="@color/curve_line_color_red"
+        app:layout_anchorGravity="end|bottom|right"/>
 
-        />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
